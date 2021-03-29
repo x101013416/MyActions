@@ -46,4 +46,4 @@ jobs:
       - name: '运行 【腾讯自选股养牛】'
         
         run: |
-          node Task/TXStockCow.js
+          node TXStockCow.js
