@@ -3,7 +3,7 @@
 自用，🈲禁止Fork！脚本里有我自己的CK！
 
 
-## 饮水思源，特别感谢
+饮水思源，特别感谢
 ----------------
 
 [@XQ0120](https://github.com/XQ0120/PlayerActions)
