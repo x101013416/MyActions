@@ -1,14 +1,14 @@
 {
-  "name": "Sunert",
+  "name": "xmly",
   "version": "1.0.0",
   "description": "",
-  "main": "jingxi.js",
+  "main": "xmly.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sunert/Scripts.git"
+    "url": "git+https://github.com/1217079729/xmly.git"
   },
   "keywords": [],
   "author": "",
