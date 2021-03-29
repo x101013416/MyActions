@@ -6,7 +6,7 @@ name: Youth_Read(中青自动阅读)
 on:
   workflow_dispatch:
   schedule:
-     - cron: '*/15 * * * *'
+     - cron: '*/20 * * * *'
   watch:
     types: Youth_Read
 jobs:
@@ -46,7 +46,7 @@ jobs:
       - name: '运行 【中青看点自动阅读三】'
         if: env.YOUTH_READ3
         run: |
-          node Youth_Read.js
+          node Task/Youth_Read.js
         env:
           YOUTH_READ: ${{ secrets.YOUTH_READ3 }}
           
