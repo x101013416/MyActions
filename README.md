@@ -1,7 +1,9 @@
 ## 收集自各处的Actions
 
+自用，🈲fork，脚本里有我自己的CK
 
-饮水思源，感谢
+
+## 饮水思源，特别感谢
 
 中青看点极速版 [@akuticlouds](https://github.com/akuticlouds/actions-youth)
 
