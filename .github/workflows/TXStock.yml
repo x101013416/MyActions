@@ -46,4 +46,4 @@ jobs:
       - name: '运行 【腾讯自选股】'
         
         run: |
-          node Task/TXStock.js
+          node TXStock.js
