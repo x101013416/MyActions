@@ -4,7 +4,7 @@
 
 饮水思源，特别感谢：
 ----------------
-[@XQ0120](https://github.com/XQ0120/PlayerActions)
-[@akuticlouds](https://github.com/akuticlouds/actions-youth)
-[@wuzhi01](https://github.com/wuzhi01/MyActions)  
 [@ZIYE](https://github.com/ziye888)
+[@CenBoMin](https://github.com/CenBoMin/GithubSync)
+[@Sunert](https://github.com/Sunert)
+[@wuzhi01](https://github.com/wuzhi01/MyActions)  
