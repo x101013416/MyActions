@@ -1,4 +1,4 @@
-name: xmly_speed(喜马拉雅极速版)
+name: 喜马拉雅极速版
 
 on:
   workflow_dispatch:
