@@ -7,4 +7,4 @@
 [@XQ0120](https://github.com/XQ0120/PlayerActions)
 [@akuticlouds](https://github.com/akuticlouds/actions-youth)
 [@wuzhi01](https://github.com/wuzhi01/MyActions)  
-[@ziye](https://github.com/ziye888)
+[@ZIYE](https://github.com/ziye888)
