@@ -1,4 +1,4 @@
-name: TXStockCow(自选股养牛)
+name: 腾讯自选股养牛
 
 on:
   workflow_dispatch:
