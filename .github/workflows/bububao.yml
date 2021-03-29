@@ -6,7 +6,8 @@ on:
   schedule:
      - cron: '3,33 0-23 * * *'
   watch:
-    types: started
+    types: youth
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,9 +17,7 @@ jobs:
         BBB_CASH: ${{ secrets.BBB_CASH }}		
         
     steps:
-      - name: Checkout
-        run: |
-          git clone https://github.com/Zoenzao/MyActions.git ~/MyActions
+      - uses: actions/checkout@v1
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -32,7 +31,6 @@ jobs:
         run: |
           node bububao.js
         env:
-          
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
