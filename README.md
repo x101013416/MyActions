@@ -1,7 +1,7 @@
-## 收集大佬的Actions
+## 收集自各处的Actions
 
 
-饮水思源：
+饮水思源，感谢
 
 中青看点极速版 [@akuticlouds](https://github.com/akuticlouds/actions-youth)
 
