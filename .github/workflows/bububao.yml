@@ -22,7 +22,7 @@ jobs:
                   npm install
             - name: "运行【步步宝】"
               run: |
-                  node bububao.js
+                  node Task/bububao.js
               env:
                   BBB_bububaoTOKEN: ${{ secrets.BBB_bububaoTOKEN }}
                   BBB_CASH: ${{ secrets.BBB_CASH }}
