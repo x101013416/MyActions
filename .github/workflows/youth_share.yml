@@ -24,4 +24,4 @@ jobs:
           npm install md5-node
       - name: '运行 【中青share】'
         run: |
-          node youthshare.js
+          node youth_share.js
