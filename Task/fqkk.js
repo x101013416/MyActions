@@ -70,7 +70,13 @@ hostname = m.*
 
 const $ = new Env('番茄看看');
 const fqkkurlArr = [], fqkkhdArr = []
-let fqkk = $.getjson('fqkk', [  {    "uid": 4185570,    "url": "http://m.nomo.pw/reada/getTask",    "hd": "{"Accept":"*/*","Accept-Encoding":"gzip, deflate","Origin":"http://m.nomo.pw","Cookie":"autoRead=1; Hm_lpvt_84099950848427564e5e4b4310ad032e=1617257396; Hm_lvt_84099950848427564e5e4b4310ad032e=1617255904; udtauth=de36ilWvltL3e1vjLUBwaH1ehBqeuGr9mx5Qux%2BtAQKKRUmfNlB5UmKmkoT1%2Fz3%2FWF6quiw5VeBL1t7J1X60pVi6v2Ot869eQyY74AuOJQcrrQSnbdnsvQ%2FBTs5a10FWNUNqw1I3u2bUhlTUK9QnaxBy%2Bj5h0MtRNoaTGQGBhZk; PHPSESSID=f8iaaes17l9iavo2a8slsjnn1c","Connection":"keep-alive","Host":"m.nomo.pw","Content-Length":"0","User-Agent":"Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.3(0x18000326) NetType/WIFI Language/zh_CN","Referer":"http://m.nomo.pw/reada?upuid=3950781","Accept-Language":"zh-cn","X-Requested-With":"XMLHttpRequest"}"  }]
+let fqkk = $.getjson('fqkk', [
+  {
+    "uid": 4185570,
+    "url": "http://m.nomo.pw/reada/getTask",
+    "hd": "{\"Accept\":\"*/*\",\"Accept-Encoding\":\"gzip, deflate\",\"Origin\":\"http://m.nomo.pw\",\"Cookie\":\"autoRead=1; Hm_lpvt_84099950848427564e5e4b4310ad032e=1617257396; Hm_lvt_84099950848427564e5e4b4310ad032e=1617255904; udtauth=de36ilWvltL3e1vjLUBwaH1ehBqeuGr9mx5Qux%2BtAQKKRUmfNlB5UmKmkoT1%2Fz3%2FWF6quiw5VeBL1t7J1X60pVi6v2Ot869eQyY74AuOJQcrrQSnbdnsvQ%2FBTs5a10FWNUNqw1I3u2bUhlTUK9QnaxBy%2Bj5h0MtRNoaTGQGBhZk; PHPSESSID=f8iaaes17l9iavo2a8slsjnn1c\",\"Connection\":\"keep-alive\",\"Host\":\"m.nomo.pw\",\"Content-Length\":\"0\",\"User-Agent\":\"Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.3(0x18000326) NetType/WIFI Language/zh_CN\",\"Referer\":\"http://m.nomo.pw/reada?upuid=3950781\",\"Accept-Language\":\"zh-cn\",\"X-Requested-With\":\"XMLHttpRequest\"}"
+  }
+]
 )
 let fqkkBanfirstTask = $.getval('fqkkBanfirstTask') || 'false' // 禁止脚本执行首个任务，避免每日脚本跑首次任务导致微信限制
 let fqkkCkMoveFlag = $.getval('fqkkCkMove') || ''
