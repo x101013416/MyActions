@@ -5,12 +5,14 @@ on:
   schedule:
      - cron: '10 6-16/2 * * *'
   watch:
-    types: started
+    types: fqkk
 jobs:
   build:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
-    env:      
+    env:
+        FQKK_URL: ${{ secrets.FQKK_URL }}
+        FQKK_HD: ${{ secrets.FQKK_HD }}       
         TZ: Asia/shanghai
     steps:
       - name: Checkout
@@ -24,6 +26,7 @@ jobs:
         run: |
           npm install
       - name: '运行 【番茄看看】'
+        if: env.FQKK_URL
         run: |
           node Task/fqkk.js
         env:
