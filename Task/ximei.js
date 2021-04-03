@@ -96,8 +96,10 @@ if(!$.isNode()&&ximeihd.indexOf("\n") ==-1){
         if (ximeiurl[item]) {
             ximeiurlArr.push(ximeiurl[item])
         }
-    });   
+    });		
+ console.log(` ============= 您共提供${ximeihdArr.length}个西梅账号 =============`);
 }
+
 
 !(async () => {
   if (typeof $request !== "undefined") {
