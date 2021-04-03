@@ -9,13 +9,13 @@
 重新下载登录小号
 
 
-扫码打开 https://ae01.alicdn.com/kf/Ua2eec7601e9e4afcbb4bf2e0b81fa917G.jpg
+扫码打开 https://ae01.alicdn.com/kf/U8c71c1ac1f47422788561b0be3d4ea2ah.jpg
 微信扫码打开可领红包
 
 
-本脚本以学习为主！
-使用方法: 打开西梅，首页推荐下拉刷新获得数据
 
+本脚本以学习为主！
+使用方法:打开西梅，首页推荐下拉刷新获得数据
 
 TG电报群: https://t.me/hahaha8028
 
@@ -67,7 +67,6 @@ let ximeihd = $.getdata('ximeihd')
 let st = '@123hb#*^&xiMEI99'
 let ximeikey = '',id = '',uid='',tid='',name=''
 
-
 if(!$.isNode()&&ximeihd.indexOf("\n") ==-1){
     ximeiurlArr.push($.getdata('ximeiurl'))
     ximeihdArr.push($.getdata('ximeihd'))
@@ -97,17 +96,15 @@ if(!$.isNode()&&ximeihd.indexOf("\n") ==-1){
         if (ximeiurl[item]) {
             ximeiurlArr.push(ximeiurl[item])
         }
-    });		
- console.log(` ============= 您共提供${ximeihdArr.length}个西梅账号 =============`);
+    });   
 }
 
 !(async () => {
-  if (isximeick = typeof $request !== "undefined") {
+  if (typeof $request !== "undefined") {
     await ximeick()
    
-  } else {
-	  //ximeiurlArr.push($.getdata('ximeiurl'))
-    //ximeihdArr.push($.getdata('ximeihd'))
+  } else {ximeiurlArr.push($.getdata('ximeiurl'))
+    ximeihdArr.push($.getdata('ximeihd'))
     let ximeicount = ($.getval('ximeicount') || '1');
   for (let i = 2; i <= ximeicount; i++) {
     ximeiurlArr.push($.getdata(`ximeiurl${i}`))
@@ -123,6 +120,7 @@ if(!$.isNode()&&ximeihd.indexOf("\n") ==-1){
           console.log(`\n开始【西梅${$.index}】`)
           await ximei1();
           await ximeixx();
+          
 
   }
 }}
@@ -151,10 +149,10 @@ $.log(ximeihd)
 function ximei1(timeout = 0) {
   return new Promise((resolve) => {
     setTimeout( ()=>{
-      //if (typeof $.getdata('ximeihd') === "undefined") {
-        //$.msg($.name,"",'请先获取西梅数据!😓',)
-        //$.done()
-      //}
+      if (typeof $.getdata('ximeihd') === "undefined") {
+        $.msg($.name,"",'请先获取西梅数据!😓',)
+        $.done()
+      }
 
 let url = {
         url : "https://app.hubonews.com/v3/articles/list",
@@ -377,6 +375,7 @@ if(result.data.point >=100){
 $.log('西梅-检测到当前梅子可提现,执行提现任务')
 await ximeitx();
 }
+        
 } else {
        console.log('\n西梅用户信息获取失败  '+result.msg)
 }
@@ -408,12 +407,12 @@ let url = {
 
         console.log('\n西梅提现成功:'+result.data.order_status)
 
-
+        
 } else {
        console.log('\n西梅提现失败  '+result.msg)
 
 }
-
+   
         } catch (e) {
           //$.logErr(e, resp);
         } finally {
