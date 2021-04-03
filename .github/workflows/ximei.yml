@@ -26,7 +26,7 @@ jobs:
       - name: '运行 【西梅】'
         if: env.XIMEI_HD
         run: |
-          node ximei.js
+          node Task/ximei.js
         env:
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
