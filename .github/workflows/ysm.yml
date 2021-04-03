@@ -4,8 +4,6 @@ on:
   schedule:
      - cron: '10 2-14/2 * * *'
   watch:
-    types: [started]
-  repository_dispatch:
     types: ysm
 jobs:
   build:
