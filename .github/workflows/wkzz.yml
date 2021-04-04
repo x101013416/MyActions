@@ -1,4 +1,4 @@
-name: 云扫码
+name: 微客众智
 on:
   workflow_dispatch:
   schedule:
