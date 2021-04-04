@@ -61,10 +61,11 @@ hostname = wx.tiantianaiyuedu.site
 
 const $ = new Env('微客众智自动阅读');
 const wkzz = $.getjson('wkzz', [{
-        "id":638654,
-        "url":"http://wx.tiantianaiyuedu.site/read/article",
-        "hd":"{"X-Requested-With":"XMLHttpRequest","Connection":"keep-alive","Accept-Encoding":"gzip, deflate","Content-Type":"application/json;charset=utf-8","Origin":"http://wx.tiantianaiyuedu.site","User-Agent":"Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.3(0x18000329) NetType/4G Language/zh_CN","X-CSRF-TOKEN":"0tBpolCHEPmtgkbWaHITFxq3m7DRM73PRLaGQDjD","Cookie":"XSRF-TOKEN=eyJpdiI6IjBxRElPaDNlMGxiNW0xWW11SWs2VEE9PSIsInZhbHVlIjoiOXdSRW85OHdXUHJZZjRQbnpJNldHOXJYTnlZYjlwVzh5em5SK1BZblZxMnRqTFA2aG13QkxNelpVdVFHK0thdVJXMlBVMVwvYkQ1N0hKaE9sRE51YWVRPT0iLCJtYWMiOiJlYjg1MzZjMDAxYmVhNzg0YjZiMjU5MTliZjU1OGJlN2ZkZWFhYjdkYTViYjQxYTllMzVmZTllNmEzNWI0ZjlkIn0%3D; laravel_session=eyJpdiI6IkFKZlVmbG05UEYxbjlCNXVlMGF4UVE9PSIsInZhbHVlIjoiYmhoSEZvTnZvYnNlTCtsMkw1UStMNVBKRHloOGZPRmFwNGVxXC95bFBHdW5PTlpTWDdCYlFwSGRCZGNxd3R1cVJRbEFPeVcwZHVabVVETXVpd2p6VU9nPT0iLCJtYWMiOiJkNWE4NmI4OGJhOGQ3NGI1MDE5M2Q5OGU5NGEwYmIxMTNlNjIxN2IxYWZkMWM2OWI4YjUwZDUwMDY0NTMyMTdmIn0%3D","Host":"wx.tiantianaiyuedu.site","Accept-Language":"zh-cn","Accept":"application/json, text/plain, */*","Content-Length":"107"}"
-    }])
+  "id": 638654,
+  "url": "http://wx.tiantianaiyuedu.site/read/article",
+  "hd": "{\"X-Requested-With\":\"XMLHttpRequest\",\"Connection\":\"keep-alive\",\"Accept-Encoding\":\"gzip, deflate\",\"Content-Type\":\"application/json;charset=utf-8\",\"Origin\":\"http://wx.tiantianaiyuedu.site\",\"User-Agent\":\"Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.3(0x18000329) NetType/4G Language/zh_CN\",\"X-CSRF-TOKEN\":\"0tBpolCHEPmtgkbWaHITFxq3m7DRM73PRLaGQDjD\",\"Cookie\":\"XSRF-TOKEN=eyJpdiI6IjBxRElPaDNlMGxiNW0xWW11SWs2VEE9PSIsInZhbHVlIjoiOXdSRW85OHdXUHJZZjRQbnpJNldHOXJYTnlZYjlwVzh5em5SK1BZblZxMnRqTFA2aG13QkxNelpVdVFHK0thdVJXMlBVMVwvYkQ1N0hKaE9sRE51YWVRPT0iLCJtYWMiOiJlYjg1MzZjMDAxYmVhNzg0YjZiMjU5MTliZjU1OGJlN2ZkZWFhYjdkYTViYjQxYTllMzVmZTllNmEzNWI0ZjlkIn0%3D; laravel_session=eyJpdiI6IkFKZlVmbG05UEYxbjlCNXVlMGF4UVE9PSIsInZhbHVlIjoiYmhoSEZvTnZvYnNlTCtsMkw1UStMNVBKRHloOGZPRmFwNGVxXC95bFBHdW5PTlpTWDdCYlFwSGRCZGNxd3R1cVJRbEFPeVcwZHVabVVETXVpd2p6VU9nPT0iLCJtYWMiOiJkNWE4NmI4OGJhOGQ3NGI1MDE5M2Q5OGU5NGEwYmIxMTNlNjIxN2IxYWZkMWM2OWI4YjUwZDUwMDY0NTMyMTdmIn0%3D\",\"Host\":\"wx.tiantianaiyuedu.site\",\"Accept-Language\":\"zh-cn\",\"Accept\":\"application/json, text/plain, */*\",\"Content-Length\":\"107\"}"
+}
+])
 let times = Math.round(Date.now() / 1000)
 let wkzzurl = '', wkzzhd = '',id = '',uid='',tid='',name=''
 !(async () => {
