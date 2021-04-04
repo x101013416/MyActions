@@ -6,7 +6,7 @@ on:
   schedule:
      - cron: '0 1 * * *'
   watch:
-    types: ximei
+    types: started
 jobs:
   build:
     runs-on: ubuntu-latest
