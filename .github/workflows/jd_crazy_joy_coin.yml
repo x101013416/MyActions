@@ -37,7 +37,7 @@ jobs:
           npm install
       - name: '运行 【疯狂的Joy挂机任务】'
         run: |
-          node Task/jd_crazy_joy_coin.js
+          node jd_crazy_joy_coin.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           PUSH_PLUS_TOKEN: ${{ secrets.PUSH_PLUS_TOKEN }}
