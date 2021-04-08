@@ -45,9 +45,8 @@ hostname = play.gxhuancai.com
 const $ = new Env('葫芦音乐');
 let status;
 status = (status = ($.getval("hlyystatus") || "1") ) > 1 ? `${status}` : ""; // 账号扩展字符
-const hlyyurlArr = 'https://play.gxhuancai.com/hlplay/task/doTasks?appVersion=1.1.3&deviceId=BKDdtA6VtRiYYv77Td1KJBhd60qhRm0KftpVEiIJGZra7r5ttjHIwmtmnTVMwP93Fc1WGA/Gz%2BqjOJSQ47PwTPg%3D%3D&os=ios&tc=fyrEegQJ_uc8tcfU-pTXIQH0Hs6ltsads&tl=35&ut=eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI4MDY4MzU4NTIwMDk0MTMwMTc2Iiwic3ViIjoiZWJJT0I2UmhvUTBRSUh6SFgwRnFXMDFXYld6bU01Z1JnIiwiaWF0IjoxNjE3ODU2Nzg3LCJleHAiOjE2MjU2MzI3ODd9.nMwjyqBo_8UNb3lBIJeJAVk-Vowc10hTqQDEZIUp_ls
-', hlyyhdArr = '{"Accept":"*/*","Accept-Encoding":"br;q=1.0, gzip;q=0.9, deflate;q=0.8","Connection":"keep-alive","Host":"play.gxhuancai.com","User-Agent":"hulumusic/1.1.3 (com.xiaoniu.hulumusic; build:22; iOS 14.4.2) Alamofire/5.4.1","app_info":"1.1.3,ios,14.4.2,appstore,com.xiaoniu.hulumusic","Accept-Language":"zh-Hans-SG;q=1.0, en-SG;q=0.9","Content-Length":"0"}'
-,hlyybodyArr = [],hlyycount = ''
+const hlyyurlArr = ['https://play.gxhuancai.com/hlplay/task/doTasks?appVersion=1.1.3&deviceId=BKDdtA6VtRiYYv77Td1KJBhd60qhRm0KftpVEiIJGZra7r5ttjHIwmtmnTVMwP93Fc1WGA/Gz%2BqjOJSQ47PwTPg%3D%3D&os=ios&tc=fyrEegQJ_uc8tcfU-pTXIQH0Hs6ltsads&tl=35&ut=eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI4MDY4MzU4NTIwMDk0MTMwMTc2Iiwic3ViIjoiZWJJT0I2UmhvUTBRSUh6SFgwRnFXMDFXYld6bU01Z1JnIiwiaWF0IjoxNjE3ODU2Nzg3LCJleHAiOjE2MjU2MzI3ODd9.nMwjyqBo_8UNb3lBIJeJAVk-Vowc10hTqQDEZIUp_ls'], hlyyhdArr = ['{"Accept":"*/*","Accept-Encoding":"br;q=1.0, gzip;q=0.9, deflate;q=0.8","Connection":"keep-alive","Host":"play.gxhuancai.com","User-Agent":"hulumusic/1.1.3 (com.xiaoniu.hulumusic; build:22; iOS 14.4.2) Alamofire/5.4.1","app_info":"1.1.3,ios,14.4.2,appstore,com.xiaoniu.hulumusic","Accept-Language":"zh-Hans-SG;q=1.0, en-SG;q=0.9","Content-Length":"0"}'], 
+hlyybodyArr = [],hlyycount = ''
 let times = Math.round(Date.now())
 let hlyyurl = $.getdata('hlyyurl')
 let hlyyhd = $.getdata('hlyyhd')
