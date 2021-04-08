@@ -6,7 +6,7 @@ on:
   schedule:
      - cron: '3,33 1-13,17,21,23 * * *'
   watch:
-    types: started
+    types: wkzz
 jobs:
   build:
     runs-on: ubuntu-latest
