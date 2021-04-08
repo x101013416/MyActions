@@ -69,8 +69,8 @@ let fqkkhd = $.getdata('fqkkhd')
 let fqkey = ''
 let fqkkxh = ($.getval('fqkkxh') || '10');  // 此处修改循环次数，默认一百
 let fqtx = ($.getval('fqtx') || '200');  // 此处修改提现金额，0.1元等于10，默认为提现一元，也就是100
-let max = 120
-let min = 37
+let max = 25
+let min = 15
 
 if ($.isNode()) {
    if (process.env.FQKK_URL && process.env.FQKK_URL.indexOf('#') > -1) {
