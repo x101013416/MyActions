@@ -56,62 +56,61 @@ let hltxje = ($.getval('hltxje') || '1');
 let txje = txsz[hltxje]
 
 
-if ($.isNode()) {
-   if (process.env.HLYY_HD && process.env.HLYY_HD.indexOf('#') > -1) {
-   hlyyhdArr = process.env.HLYY_HD.split('#');
-   console.log(`您选择的是用"#"隔开\n`)
-  }
-  else if (process.env.HLYY_HD && process.env.HLYY_HD.indexOf('\n') > -1) {
-   hlyyhdArr = process.env.HLYY_HD.split('\n');
-   console.log(`您选择的是用换行隔开\n`)
-  } else {
-   hlyyhdArr = process.env.HLYY_HD.split()
-  };
-  if (process.env.HLYY_URL && process.env.HLYY_URL.indexOf('#') > -1) {
-   hlyyurlArr = process.env.HLYY_URL.split('#');
-   console.log(`您选择的是用"#"隔开\n`)
-  }
-  else if (process.env.HLYY_URL && process.env.HLYY_URL.indexOf('\n') > -1) {
-   hlyyurlArr = process.env.HLYY_URL.split('\n');
-   console.log(`您选择的是用换行隔开\n`)
-  } else {
-   hlyyurlArr = process.env.HLYY_URL.split()
-  };
-  
-  
-  
-    console.log(`============ 脚本执行-国际标准时间(UTC)：${new Date().toLocaleString()}  =============\n`)
-    console.log(`============ 脚本执行-北京时间(UTC+8)：${new Date(new Date().getTime() + 8 * 60 * 60 * 1000).toLocaleString()}  =============\n`)
-
- } else {hlyyurlArr.push($.getdata('hlyyurl'))
+if(!$.isNode()&&hlyyhd.indexOf("\n") ==-1){
+    hlyyurlArr.push($.getdata('hlyyurl'))
     hlyyhdArr.push($.getdata('hlyyhd'))
-    hlyybodyArr.push($.getdata('hlybodyArr'))
-    let hlyycount = ($.getval('hlyycount') || '1');
-  for (let i = 2; i <= ysmcount; i++) {
-    hlyyurlArr.push($.getdata(`hlyyurlArr${i}`))
-    hlyyhdArr.push($.getdata(`hlyyhdArr${i}`))
-    hlyybodyArr.push($.getdata(`hlyybodyArr${i}`))
-  }
-}
+    //hlyybodyArr.push($.getdata('hlyybody'))	
+} else {
+    if($.isNode()){
+    if (process.env.HLYY_HD && process.env.HLYY_HD.indexOf('\n') > -1) {
+        hlyyhd = process.env.HLYY_HD.split('\n');
+    } else {
+        hlyyhd = [process.env.HLYY_HD]
+    };
+    if (process.env.HLYY_URL && process.env.HLYY_URL.indexOf('\n') > -1) {
+        hlyyurl = process.env.HLYY_URL.split('\n');
+    } else {
+        hlyyurl = [process.env.HLYY_URL]
+    };
+	//let hlyybody = $.getdata('hlyybody')
 
+    console.log(` ============脚本执行 - 北京时间 (UTC + 8)：${new Date(new Date().getTime()).toLocaleString()} =============\n`);
+ } else if(!$.isNode()&&hlyyhd.indexOf("\n")>-1){
+   hlyyhd = hlyyhd.split("\n")
+   hlyyurl = hlyyurl.split("\n")
+   let hlyybody = $.getdata('hlyybody')
+};
+    Object.keys(hlyyhd).forEach((item) =>{
+        if (hlyyhd[item]) {
+        hlyyhdArr.push(hlyyhd[item])
+        }
+    });
+    Object.keys(hlyyurl).forEach((item) =>{
+        if (hlyyurl[item]) {
+            hlyyurlArr.push(hlyyurl[item])
+        }
+    });	
+    //hlyybodyArr.push($.getdata('hlyybody'))	
+ console.log(` ============= 您共提供${hlyyhdArr.length}个葫芦音乐账号 =============`);
+}
 
 !(async () => {
   if (typeof $request !== "undefined") {
     await hlyyck()
    
-  } else {hlyyurlArr.push($.getdata('hlyyurl'))
-    hlyyhdArr.push($.getdata('hlyyhd'))
-    hlyybodyArr.push($.getdata('hlyybody'))
+  } else {//hlyyurlArr.push($.getdata('hlyyurl'))
+    //hlyyhdArr.push($.getdata('hlyyhd'))
+    //hlyybodyArr.push($.getdata('hlyybody'))
     let hlyycount = ($.getval('hlyycount') || '1');
   for (let i = 2; i <= hlyycount; i++) {
     hlyyurlArr.push($.getdata(`hlyyurl${i}`))
     hlyyhdArr.push($.getdata(`hlyyhd${i}`))
-    hlyybodyArr.push($.getdata(`hlyybody${i}`))
+    //hlyybodyArr.push($.getdata(`hlyybody${i}`))
   }
     console.log(`------------- 共${hlyyhdArr.length}个账号-------------\n`)
       for (let i = 0; i < hlyyhdArr.length; i++) {
         if (hlyyhdArr[i]) {
-          hlyybody = hlyybodyArr[i];
+          //hlyybody = hlyybodyArr[i];
           hlyyurl = hlyyurlArr[i];
           hlyyhd = hlyyhdArr[i];
           $.index = i + 1;
